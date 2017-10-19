@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <h1 class="heading">Mikaela Johansson <span class="accent-color">- Graphic designer</span></h1>
+    <nav class="main-navigation">
+      <div class="button js-scroll-nav active">Top</div>
+      <div class="button js-scroll-nav">About</div>
+      <div class="button js-scroll-nav">Projects</div>
+      <div class="button js-scroll-nav">Contact</div>
+    </nav>
+    <main>
+      <section class="big-block js-scroll-pos">
+        <div class="big-block-inner">
+          <div class="logo-container">
+            <img class="logo" src="<%= require('./assets/images/MJ-logga.svg') %>" alt="">
+          </div>
+        </div>
+      </section>
+
+      <section class="big-block js-scroll-pos">
+        <div class="big-block-inner">
+          <p>My name is <span>Mikaela. </span>I do<span> web design, graphic design, app design, print & illustration. </span>I manage <span>Sketch, Adobe, Invision, pen & paper. </span>I am <span>humble, structured and great with presentations.</span></p>
+        </div>
+      </section>
+
+      <section class="big-block js-scroll-pos">
+          <div class="slide-container">
+        <section class="projects-container">
+
+            <div class="project-info">
+              <button class="back-button">back</button>
+                <p>Let's meet <span>and I'll show you some of my work and tell you all you want to know :D</span></p>
+            </div>
+
+          <div class="project-list">
+            <article class="project">
+              <div class="project-content">
+                <img class="project-logo" src="<%= require('./assets/logos/hygglo.svg') %>" alt="hygglo logo">
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-content">
+                <img class="project-logo" src="<%= require('./assets/logos/comviq.svg') %>" alt="comviq logo">
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-content">
+                <img class="project-logo" src="<%= require('./assets/logos/mini.svg') %>" alt="comviq">
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-content">
+                <img class="project-logo" src="<%= require('./assets/logos/nix.svg') %>" alt="comviq">
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-content">
+                <img class="project-logo" src="<%= require('./assets/logos/keyflow.svg') %>" alt="comviq">
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-content">
+                <img class="project-logo" src="<%= require('./assets/logos/bmw.svg') %>" alt="comviq">
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-content">
+                <img class="project-logo" src="<%= require('./assets/logos/allt_for_foraldrar.svg') %>" alt="comviq">
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-content">
+                <img class="project-logo" src="<%= require('./assets/logos/sv.svg') %>" alt="comviq">
+              </div>
+            </article>
+          </div>
+
+
+        </section>
+      </div>
+      </section>
+
+      <section class="big-block js-scroll-pos">
+        <div class="big-block-inner">
+          <p>Let's meet <span>and I'll show you some of my work and tell you all you want to know :D</span></p>
+        </div>
+        <div class="sm-container">
+          <a href="http://linkedin.com"><img src="<%= require('./assets/icons/icon-linkedin.svg') %>" alt="linkedIn"></a>
+          <a href="http://linkedin.com"><img src="<%= require('./assets/icons/icon-mail.svg') %>" alt="mail"></a>
+        </div>
+      </section>
+    </main>
+      <footer><span>Designed by</span> <img class="logo" src="<%= require('./assets/images/miki-face.png') %>" alt=""></footer>
+
+      <div class="landscape-message">
+        <section class="big-block">
+          <div class="big-block-inner">
+              <p>Please turn your phone for the best experience.</p>
+              <img src="<%= require('./assets/images/turn-icon.svg') %>" alt="turn phone">
+          </div>
+        </section>
+      </div>
+
+  </body>
+</html>
