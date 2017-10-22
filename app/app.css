@@ -31,16 +31,36 @@ main {
 
 .heading {
   position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  white-space: nowrap;
+
+}
+
+.heading.heading-mobile {
+  bottom: calc(var(--siteBorder) /2);
+  color: #fff;
+  font-size: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media(min-width: 660px) {
+    display: none;
+  }
+}
+.heading.heading-desktop {
   top: calc(var(--siteBorder) /2);
   right: var(--siteBorder);
   color: #AD10FF;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   font-size: .7em;
-  font-weight: 400;
 
   .accent-color {
     color: #FF2BB8;
+  }
+
+  @media(max-width: 660px) {
+    display: none;
   }
 }
 
@@ -102,6 +122,7 @@ main {
   background-color: #fff;
   height: calc(var(--siteBorder) / 2);
   justify-content: center;
+  align-items: center;
   width: 100%;
 
   @media (min-width: 660px) {
@@ -123,11 +144,15 @@ main {
   opacity: .3;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: .7em;
+  font-size: .9em;
   display: inline-block;
 
   &.is-active {
     opacity: .7;
+  }
+
+  @media(min-width: 660px) {
+    font-size: .7em;
   }
 }
 
@@ -213,17 +238,34 @@ main {
 }
 
 .back-button {
-  background-color: transparent;
+  font-size: 1em;
+  background-color: #50F294;
   border: 0;
   color: white;
   display: flex;
   opacity: 0;
   transition: all 1s;
-  transform: translate3d(0,100px,0);
+  transform: translate3d(0,50px,0);
+  transition-delay: 0.4s;
   align-items: center;
+  padding: 15px 25px 15px 45px;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
 
   &:focus {
     outline: 0;
+  }
+
+  &:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-top: 8px solid white;
+    border-left: 8px solid white;
+    transform: rotate(315deg);
+    left: 15px;
+    position: absolute;
   }
 }
 
@@ -233,7 +275,7 @@ main {
 
 .project-info-is-open .back-button {
   opacity: 1;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0,-20px,0);
 }
 
 .project {
@@ -328,11 +370,4 @@ footer img {
     padding: calc(var(--siteBorder) / 2);
     text-align: center;
   }
-}
-
-/* Animations */
-@keyframes moveBg {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
 }
