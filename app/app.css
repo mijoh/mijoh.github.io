@@ -116,7 +116,7 @@ main {
     font-size: .7em;
   }
 
-  div.active {
+  div.is-active {
     opacity: .7;
   }
 
@@ -161,11 +161,11 @@ main {
   justify-content: space-between;
   align-items: center;
   /* position: absolute; */
-  transform: translate3d(-50%,0,0);
-  transition: transform 0.5s;
+  transform: translate3d(0,0,0);
+  transition: transform 1s;
 
   &.project-info-is-open {
-    transform: translate3d(0,0,0);
+    transform: translate3d(-50%,0,0);
   }
 }
 
@@ -177,16 +177,57 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-column-gap: calc(var(--siteBorder) / 2);
   grid-row-gap: calc(var(--siteBorder) / 2);
-  transition: transform 0.5s;
+  transition: opacity .5s;
+  opacity: 1;
 
   @media (min-width: 660px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-.project-info {
+.project-info-is-open .project-list {
+  opacity: 0;
+}
+
+.project-info-container {
   flex-grow: 1;
   flex-basis: 0;
+  opacity: 0.5;
+  transition: all 1s;
+  transform: translate3d(30%,0,0);
+}
+
+.project-info-is-open .project-info-container {
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+
+.project-info {
+  display: none;
+}
+
+.back-button {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  display: flex;
+  opacity: 0;
+  transition: all 1s;
+  transform: translate3d(0,100px,0);
+  align-items: center;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.back-button img {
+  margin-right: 10px;
+}
+
+.project-info-is-open .back-button {
+  opacity: 1;
+  transform: translate3d(0,0,0);
 }
 
 .project {
@@ -259,6 +300,7 @@ footer img {
   height: auto;
 }
 
+/* Show message on phones in landscape */
 .landscape-message {
   display: none;
 }
@@ -272,8 +314,17 @@ footer img {
     display: flex;
     background-color: #fff;
   }
+
+  .landscape-message .big-block {
+    width: calc(100vw - var(--siteBorder));
+    min-height: calc(100vh - var(--siteBorder));
+    margin: calc(var(--siteBorder) / 2);
+    padding: calc(var(--siteBorder) / 2);
+    text-align: center;
+  }
 }
 
+/* Animations */
 @keyframes moveBg {
     0%{background-position:51% 0%}
     50%{background-position:50% 100%}

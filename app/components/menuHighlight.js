@@ -17,9 +17,9 @@ const menuHighlight = (scrollPositions, scrollTriggers) => {
   function handleClass(activeItem) {
     for(let st of scrollTriggers) {
       if(st == activeItem) {
-        st.classList.add('active');
+        st.classList.add('is-active');
       } else {
-        st.classList.remove('active');
+        st.classList.remove('is-active');
       }
     }
   }
