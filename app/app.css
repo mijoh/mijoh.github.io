@@ -27,6 +27,11 @@ main {
   z-index: 1;
   margin-bottom: var(--siteBorder);
   background-color: #fff;
+  margin-bottom: calc(var(--siteBorder) / 2);
+
+  @media(min-width: 660px) {
+    margin-bottom: var(--siteBorder);
+  }
 }
 
 .heading {
@@ -331,11 +336,15 @@ footer {
   position: fixed;
   z-index: 0;
   bottom: 0;
-  height: var(--siteBorder);
+  height: calc(var(--siteBorder) / 2);
   background-color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .7em;
+
+  @media(min-width: 660px) {
+    height: var(--siteBorder);
+  }
 }
 
 footer span {
