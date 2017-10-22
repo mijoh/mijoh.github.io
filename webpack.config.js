@@ -53,7 +53,7 @@ module.exports = {
   devServer: {
     hot: true,
     inline: true,
-    host: 'localhost',
+    host: '192.168.1.179',
     contentBase: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     port: 1988,
