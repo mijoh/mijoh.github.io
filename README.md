@@ -1,2 +1,2 @@
-# mijoh.github.io
-My personal site
+# My personal website
+### Hosted at [http://mijoh.se](http://mijoh.se).
