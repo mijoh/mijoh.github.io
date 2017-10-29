@@ -63,7 +63,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Custom template',
+      title: 'Mikaela Johansson - Graphic Designer',
       template: './app/index.html',
       minify: {
         collapseWhitespace: true

@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= require('./assets/favicon/apple-touch-icon.png') %>">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= require('./assets/favicon/favicon-32x32.png') %>">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= require('./assets/favicon/favicon-16x16.png') %>">
+  <link rel="mask-icon" href="<%= require('./assets/favicon/safari-pinned-tab.svg') %>" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 
@@ -27,7 +32,7 @@
 
     <section class="big-block js-scroll-pos">
       <div class="big-block-inner">
-        <p>My name is <span>Mikaela. </span>I do<span> web design, graphic design, app design, print & illustration. </span>I manage <span>Sketch, Adobe, Invision, pen & paper. </span>I am <span>humble, structured and great with presentations.</span></p>
+        <p>My name is <span>Mikaela. </span>I do<span> web design, graphic design, app design, print & illustration. </span>I work with <span>Sketch, Adobe, Invision, pen & paper. </span>I am <span>humble, structured and great with presentations.</span></p>
       </div>
     </section>
 
@@ -83,7 +88,7 @@
           <div class="project-info-container">
 
             <button class="back-button">
-              <span>Back to projects</span>
+              <img src="<%= require('./assets/icons/icon-back.svg') %>" alt="back to projects">
             </button>
 
             <div class="project-info comviq-info">
@@ -110,6 +115,7 @@
             <div class="project-info sv-info">
               <p>Studie<wbr>förbundet Vuxenskolan<br><span>New user experience, website design and digital identity.</span></p>
             </div>
+
           </div>
         </section>
       </div>
