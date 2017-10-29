@@ -30,3 +30,7 @@ for(let pb of projectButtons) {
 backButton.addEventListener('click', () => {
   projectsContainer.classList.remove('project-info-is-open')
 })
+
+// Scroll to last stop on heading click
+const heading = Array.from(document.querySelectorAll('.heading-desktop'))
+menuScroll(scrollPositions.slice(-1)[0], heading)
