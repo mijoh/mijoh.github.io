@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ReloadPlugin = require('reload-html-webpack-plugin');
+
 
 const isProd = process.env.NODE_ENV === 'production';
 const cssDev = [
@@ -51,15 +51,8 @@ module.exports = {
     ]
   },
   devServer: {
-    hot: true,
-    inline: true,
-    host: 'localhost',
-    contentBase: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
-    port: 1988,
-    stats: "errors-only",
-    open: false,
-    openPage: ''
+    contentBase: path.join(__dirname, 'app'),
+    watchContentBase: true
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -69,11 +62,6 @@ module.exports = {
         collapseWhitespace: true
       }
     }),
-    new ReloadPlugin({
-      disable: !isProd
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
     new ExtractTextPlugin({
       filename: 'app.css',
       disable: !isProd,
