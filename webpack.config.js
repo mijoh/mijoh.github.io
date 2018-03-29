@@ -17,7 +17,7 @@ const cssProd = ExtractTextPlugin.extract({
 let cssConfig = isProd ? cssProd : cssDev;
 
 module.exports = {
-  entry: './app/index.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname),
     filename: 'dist.bundle.js'
@@ -57,13 +57,13 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'app'),
+    contentBase: path.join(__dirname, 'src'),
     watchContentBase: true
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Mikaela Johansson - Graphic Designer',
-      template: './app/index.html',
+      template: './src/index.html',
       minify: {
         collapseWhitespace: true
       }
