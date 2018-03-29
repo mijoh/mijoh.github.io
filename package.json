@@ -1,13 +1,13 @@
 {
   "name": "mijoh.se",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean && export NODE_ENV=production && webpack --mode production",
     "start": "webpack-dev-server --colors --hot --inline --mode development --port 1988",
-    "clean": "rm -rf ./dist"
+    "clean": "rm -rf ./assets && rm -f dist.bundle.js dist.css index.html"
   },
   "author": "Tim Jackleus",
   "license": "MIT",

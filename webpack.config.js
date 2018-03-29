@@ -19,8 +19,8 @@ let cssConfig = isProd ? cssProd : cssDev;
 module.exports = {
   entry: './app/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'app.bundle.js'
+    path: path.resolve(__dirname),
+    filename: 'dist.bundle.js'
   },
   module: {
     rules: [
@@ -39,7 +39,13 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
-          'file-loader?name=[hash:6].[ext]&outputPath=assets/images/',
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[hash:6].[ext]',
+              outputPath: 'assets/images/'
+            }
+          },
           {
             loader: 'image-webpack-loader',
             options: {
@@ -63,7 +69,7 @@ module.exports = {
       }
     }),
     new ExtractTextPlugin({
-      filename: 'app.css',
+      filename: 'dist.css',
       disable: !isProd,
       allChunks: true
     })
