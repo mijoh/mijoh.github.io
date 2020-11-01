@@ -1,0 +1,22 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+// require('smoothscroll-polyfill').polyfill()
+const menuScroll = (scrollPositions, scrollTriggers) => {
+  for (let i = 0; i < scrollTriggers.length; i++) {
+    scrollTriggers[i].addEventListener("click", () => {
+      window.scroll({
+        left: 0,
+        top: scrollPositions[i] || scrollPositions,
+        behavior: "smooth"
+      });
+    });
+  }
+};
+
+var _default = menuScroll;
+exports.default = _default;
