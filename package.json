@@ -4,14 +4,14 @@
   "description": "Mikaela Johansson personal site",
   "main": "index.html",
   "scripts": {
-    "start": "parcel serve ./src/index.html --port 1988",
-    "build": "parcel build ./src/index.html"
+    "start": "parcel serve src/index.html --port 1988",
+    "build": "./build.sh"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.0.0-nightly.438",
-    "postcss": "^8.1.4",
+    "postcss": "^8.1.7",
     "postcss-import": "^13.0.0",
     "postcss-nested": "^5.0.1"
   }
