@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-@import 'reset.css';
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import "./reset.css";
 
 :root {
-  --primaryFont: 'Montserrat', sans-serif;
+  --primaryFont: "Montserrat", sans-serif;
   --siteBorder: 5rem;
-  --projectBorder: 1px solid rgba(255,255,255,0.5);
+  --projectBorder: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 ::selection {
@@ -33,7 +33,7 @@ main {
   background-color: #fff;
   margin-bottom: calc(var(--siteBorder) / 2);
 
-  @media(min-width: 660px) {
+  @media (min-width: 660px) {
     margin-bottom: var(--siteBorder);
   }
 }
@@ -46,30 +46,29 @@ main {
   letter-spacing: 1px;
   font-weight: 400;
   white-space: nowrap;
-
 }
 
 .heading.heading-mobile {
-  bottom: calc(var(--siteBorder) /2);
+  bottom: calc(var(--siteBorder) / 2);
   color: #fff;
   left: 50%;
   transform: translateX(-50%);
 
-  @media(min-width: 660px) {
+  @media (min-width: 660px) {
     display: none;
   }
 }
 .heading.heading-desktop {
-  top: calc(var(--siteBorder) /2);
+  top: calc(var(--siteBorder) / 2);
   right: var(--siteBorder);
-  color: #AD10FF;
+  color: #ad10ff;
   font-size: 0.7rem;
 
   .accent-color {
-    color: #FF2BB8;
+    color: #ff2bb8;
   }
 
-  @media(max-width: 660px) {
+  @media (max-width: 660px) {
     display: none;
   }
 }
@@ -103,12 +102,19 @@ main {
   background-position: center center;
   background-size: cover;
   animation: none;
-  background-image: url('assets/images/miki-bw.jpg'), linear-gradient(360deg, #FF46A6 5%, #CC00FF 79% );
+  background-image: url("assets/images/miki-bw.jpg"),
+    linear-gradient(360deg, #ff46a6 5%, #cc00ff 79%);
   background-blend-mode: screen;
 }
-.big-block:nth-child(2) { background-image: linear-gradient(360deg, #FFDD76 0%, #F446BD 100%); }
-.big-block:nth-child(3) { background-image: linear-gradient(180deg, #FFDD76 0%, #74FFB4 98%); }
-.big-block:nth-child(4) { background-image: linear-gradient(360deg, #666FFE 0%, #74FFB4 98%); }
+.big-block:nth-child(2) {
+  background-image: linear-gradient(360deg, #ffdd76 0%, #f446bd 100%);
+}
+.big-block:nth-child(3) {
+  background-image: linear-gradient(180deg, #ffdd76 0%, #74ffb4 98%);
+}
+.big-block:nth-child(4) {
+  background-image: linear-gradient(360deg, #666ffe 0%, #74ffb4 98%);
+}
 
 .big-block p {
   font-size: 2rem;
@@ -151,17 +157,17 @@ main {
   color: #000;
   padding: 20px;
   font-weight: 400;
-  opacity: .3;
+  opacity: 0.3;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.9rem;
   display: inline-block;
 
   &.is-active {
-    opacity: .7;
+    opacity: 0.7;
   }
 
-  @media(min-width: 660px) {
+  @media (min-width: 660px) {
     font-size: 0.7rem;
   }
 }
@@ -212,7 +218,7 @@ main {
 
   @media (min-width: 660px) {
     margin-bottom: 0;
-      margin-right: 25px;
+    margin-right: 25px;
   }
 }
 
@@ -229,11 +235,11 @@ main {
   color: inherit;
   padding: 0 20px;
   height: 40px;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     background-color: #fff;
-    color: #74FFB4;
+    color: #74ffb4;
   }
 }
 
@@ -257,7 +263,7 @@ main {
   box-sizing: border-box;
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     padding-bottom: 50%;
   }
@@ -266,18 +272,18 @@ main {
     border-right: var(--projectBorder);
   }
 
-  &:not(:nth-last-child(-n+2)){
+  &:not(:nth-last-child(-n + 2)) {
     border-bottom: var(--projectBorder);
   }
 
-  @media(min-width: 660px) {
+  @media (min-width: 660px) {
     border: none !important;
 
-    &:nth-child(-n+4) {
+    &:nth-child(-n + 4) {
       border-bottom: var(--projectBorder) !important;
     }
 
-    &:not(:nth-child(4n+4)) {
+    &:not(:nth-child(4n + 4)) {
       border-right: var(--projectBorder) !important;
     }
   }
@@ -323,7 +329,7 @@ footer {
   letter-spacing: 1px;
   font-size: 0.7rem;
 
-  @media(min-width: 660px) {
+  @media (min-width: 660px) {
     height: var(--siteBorder);
   }
 }
@@ -337,7 +343,7 @@ footer img {
   width: 1.5rem;
   height: auto;
 
-  @media(min-width: 660px) {
+  @media (min-width: 660px) {
     width: 3rem;
   }
 }
@@ -368,7 +374,13 @@ footer img {
 
 /* Animations */
 @keyframes moveBg {
-  0%{background-position:51% 0%}
-  50%{background-position:50% 100%}
-  100%{background-position:51% 0%}
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
 }
