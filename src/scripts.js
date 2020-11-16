@@ -19,7 +19,3 @@ const scrollPositions = scrollPositionElements.map((sp) => sp.offsetTop);
 
 menuHighlight(scrollPositionsWithMargins, scrollTriggers);
 menuScroll(scrollPositions, scrollTriggers);
-
-// Scroll to last stop on heading click
-const heading = Array.from(document.querySelectorAll(".heading-desktop"));
-menuScroll(scrollPositions.slice(-1)[0], heading);
