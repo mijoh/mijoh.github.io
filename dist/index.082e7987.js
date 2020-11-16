@@ -442,10 +442,7 @@ const scrollPositionMargin = parseInt(window.getComputedStyle(scrollPositionElem
 const scrollPositionsWithMargins = scrollPositionElements.map(sp => sp.offsetTop - scrollPositionMargin);
 const scrollPositions = scrollPositionElements.map(sp => sp.offsetTop);
 (0, _menuHighlight.default)(scrollPositionsWithMargins, scrollTriggers);
-(0, _menuScroll.default)(scrollPositions, scrollTriggers); // Scroll to last stop on heading click
-
-const heading = Array.from(document.querySelectorAll(".heading-desktop"));
-(0, _menuScroll.default)(scrollPositions.slice(-1)[0], heading);
+(0, _menuScroll.default)(scrollPositions, scrollTriggers);
 },{"./components/menuHighlight":"01Hnl","./components/menuScroll":"3Atoa"}],"01Hnl":[function(require,module,exports) {
 "use strict";
 
@@ -455,26 +452,24 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 const menuHighlight = (scrollPositions, scrollTriggers) => {
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     let current = window.pageYOffset;
 
     if (current <= scrollPositions[1]) {
       handleClass(scrollTriggers[0]);
     } else if (current > scrollPositions[1] && current <= scrollPositions[2]) {
       handleClass(scrollTriggers[1]);
-    } else if (current > scrollPositions[2] && current <= scrollPositions[3]) {
+    } else if (current > scrollPositions[2]) {
       handleClass(scrollTriggers[2]);
-    } else if (current > scrollPositions[3]) {
-      handleClass(scrollTriggers[3]);
     }
   });
 
   function handleClass(activeItem) {
     for (let st of scrollTriggers) {
       if (st == activeItem) {
-        st.classList.add('is-active');
+        st.classList.add("is-active");
       } else {
-        st.classList.remove('is-active');
+        st.classList.remove("is-active");
       }
     }
   }
