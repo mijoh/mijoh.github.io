@@ -84,6 +84,7 @@ p {
   }
 .showInDesktop {
   display: none;
+  text-align: center;
 }
 @media (min-width: 660px) {
 .showInDesktop {
@@ -236,7 +237,7 @@ p {
 @media (min-width: 660px) {
 .project-logo {
     margin: 20px 0 30px 0;
-    display: block
+    display: inline-block
 }
   }
 .project-logo.multiple {

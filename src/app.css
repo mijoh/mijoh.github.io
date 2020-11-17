@@ -59,6 +59,7 @@ p {
 
 .showInDesktop {
   display: none;
+  text-align: center;
   @media (min-width: 660px) {
     display: block;
   }
@@ -215,7 +216,7 @@ p {
 
   @media (min-width: 660px) {
     margin: 20px 0 30px 0;
-    display: block;
+    display: inline-block;
   }
 }
 
