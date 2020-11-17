@@ -1,2 +1,2 @@
 # My personal website
-### Hosted at [http://mijoh.se](http://mijoh.se).
+### Hosted at [https://mijoh.se](https://mijoh.se).
