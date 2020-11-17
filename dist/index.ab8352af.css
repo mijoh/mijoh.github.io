@@ -247,8 +247,10 @@ p {
   margin-top: var(--siteBorder);
 }
 .sm-container a {
-  margin-right: 20px;
   display: inline-block;
+}
+.sm-container a:first-child {
+  margin-right: 20px;
 }
 .sm-container .sm-icon {
   transition: fill 0.3s;
