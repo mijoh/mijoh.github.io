@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.0.0-nightly.438",
+    "parcel": "^2.16.1",
     "postcss": "^8.1.7",
     "postcss-import": "^13.0.0",
     "postcss-nested": "^5.0.1"
